@@ -1,0 +1,267 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: rgba(0, 128, 128, 0.8); /* Ajustement de la couleur pour un meilleur contraste */
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    border-bottom: 2px solid rgba(128, 128, 0, 0); /* Ajout d'une bordure en bas pour une séparation nette */
+}
+
+header .imgG, header .imgD {
+    position: absolute;
+    top: 10px;
+}
+
+header .imgG {
+    left: 10px;
+}
+
+header .imgD {
+    right: 10px;
+}
+
+.topnav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+
+.topnav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.5s ease; /* Transition pour une animation douce */
+}
+
+.topnav a:hover {
+    text-decoration: underline rgba(128, 128, 0, 0.644) 5px;
+    background-color: rgba(128, 128, 0, 0.644); /* Changement de couleur de fond au survol */
+    border-radius: 5px; /* Arrondissement au survol */
+}
+
+.fond {
+    padding: 20px;
+    background-image: url('../image/bleumarine.avif');   
+    margin: 20px;
+    border-radius: 15px; /* Arrondissement plus prononcé */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Augmentation de l'ombre pour plus de profondeur */
+    display: flex;
+    flex-direction: column;
+}
+
+.daty {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.center {
+    text-align: center;
+}
+
+.underline {
+    text-decoration: underline;
+    color: olive;
+}
+
+.img {
+    background-color: grey;
+    margin-left: auto;
+    margin-right: auto; /* Centrage de l'image */
+    border: 3px solid grey;
+    border-radius: 100px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px; /* Espacement entre les colonnes */
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+    background-color: gray;
+    margin: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 15px; /* Arrondissement des coins des colonnes */
+    transition: all 0.3s ease; /* Transition douce pour les effets */
+}
+
+.column:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3); /* Effet d'ombre au survol pour plus de profondeur */
+    transform: translateY(-5px); /* Légère élévation au survol */
+}
+
+h5 {
+    color: white;
+    font-size: medium;
+}
+
+.h3 {
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: gray;
+    width: 400px;
+    color: white;
+    font-size: medium;
+}
+
+.column p {
+    color: olive;
+    font-weight: bold;
+}
+
+p br li {
+    text-align: center;
+}
+
+/* Style pour le fond vidéo */
+#bgVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Style pour le contenu superposé */
+header {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+.overlay {
+    position: relative;
+    z-index: 2;
+}
+
+/* Effet de verre cassé */
+@keyframes shatter {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0); opacity: 0; }
+}
+
+.shatter {
+    position: relative;
+    display: inline-block;
+    animation: shatter 1s ease-in-out forwards;
+    opacity: 0; /* Masque l'élément après l'animation */
+}
+
+.shatter::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2), rgba(0,0,0,0.1));
+    transform: scale(1.5);
+    z-index: 1;
+    animation: shatter 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+/* Style du selecteur */
+#redirectSelect {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid olive;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+#redirectSelect:hover {
+    background-color: rgba(128, 128, 0, 0.664);
+    border-color: white;
+    color: white;
+}
+
+/* Option stylée */
+#redirectSelect option {
+    background-color: rgba(177, 177, 177, 0.541);
+    color: white;
+    padding: 10px;
+}
+
+
+/* Style pour le bouton */
+.styled-button {
+    background-color: red; 
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Effet de survol */
+.styled-button:hover {
+    background-color: #45a049; /* Changement de couleur au survol */
+    transform: translateY(-3px); /* Légère translation vers le haut */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+}
+
+/* Effet lors de l'appui */
+.styled-button:active {
+    background-color: #3e8e41; /* Couleur encore plus foncée au clic */
+    transform: translateY(2px); /* Translation inverse pour effet de "pression" */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre réduite */
+}
+
+/* Style pour les champs non remplis */
+input:invalid, textarea:invalid {
+    border: 2px solid red;
+}
+
+/* Style pour l'alerte */
+.alert {
+    color: red;
+    font-weight: bold;
+    display: none;
+    margin-top: 10px;
+}
+
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    border-top: 2px solid olive; /* Ajout d'une bordure en haut pour séparer le footer du reste de la page */
+}
